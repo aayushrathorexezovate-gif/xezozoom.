@@ -26,6 +26,6 @@ app.get("/home" , (req,res) => {
 const connectionDB = await mongoose.connect("mongodb+srv://aayushrathorexezovate_db_user:4FkkguCPa0YY7lNr@cluster0.gdo1nzh.mongodb.net/?appName=Cluster0")
 console.log(`Connected to DB : ${connectionDB.connection.host}`);
 
-server.listen( 8080 , ()=> {
+server.listen( PORT , ()=> {
     console.log(`server is listening port ${PORT} `);
 })
