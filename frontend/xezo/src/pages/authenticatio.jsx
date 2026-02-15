@@ -27,7 +27,7 @@ export default function Authentication() {
 
 
     const[username , setUsername]= React.useState();  // username
-    const[formState , setFormState] = React.useState(); // formState (check whether it is in sign-up or in sig-in )
+    const[formState , setFormState] = React.useState(0); // formState (check whether it is in sign-up or in sig-in )
     const[password , setPassword] = React.useState(); //password 
     const[name , setName] = React.useState(); // name
     const[message , setMessage] = React.useState();
@@ -115,7 +115,7 @@ const[open , setOpen] = React.useState(false);
                                 id="full name"
                                 label="Full Name"
                                 name="fullname"
-                                value={username}
+                                value={name}
                               onChange ={(e) => setName(e.target.value)}
                                 autoFocus
                                 
@@ -142,6 +142,7 @@ const[open , setOpen] = React.useState(false);
                                 label="password"
                                 name="password"
                                 value={password}
+                                 type="password"
                               onChange = {(e) => setPassword(e.target.value)}
                                 autoFocus
                                 
@@ -165,12 +166,13 @@ const[open , setOpen] = React.useState(false);
 
            
            {/* <Snackbar> notification bar at bottom */}
-           <Snackbar>
+           <Snackbar
             open={open}
             autoHideDuration={4000}
             message={message}
+               onClose={() => setOpen(false)}
 
-           </Snackbar>
+           />
 
 
         </ThemeProvider>
