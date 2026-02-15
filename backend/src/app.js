@@ -11,7 +11,7 @@ import cors from "cors";
 const app = express();         // to connect the express 
 const server = createServer(app);   // to link the webRTC to a express 
 const io = connectToSocket(server);    // to connect the WEBRTC 
-const PORT = 8080;
+const PORT = process.env.PORT ||8080;
 
 app.use(cors());
 app.use (express.json({limit : "40kb"}));
