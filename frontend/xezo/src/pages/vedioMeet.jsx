@@ -286,7 +286,7 @@ export default function VideoMeetComponent() {
             }catch(e){ console.log(e)}
 
             let blackSilence =(...args )=> new MediaStream([black(...args)] , silence())
-            window.localStream = blackSilence
+            window.localStream = blackSilence()
             localVideoref.current.srcObject = window.localStream
 
             getUserMedia()
