@@ -497,11 +497,11 @@ export default function VideoMeetComponent() {
 
    }
     
-   useEffect(() => {
-    if(screen !== undefined){
-        getDisplayMedia();
-    }
-   } ,[screen] )
+   // useEffect(() => {
+   //  if(screen !== undefined){
+   //      getDisplayMedia();
+   //  }
+   // } ,[screen] )
     
     let connect = () => {
         setAskForUsername(false);
