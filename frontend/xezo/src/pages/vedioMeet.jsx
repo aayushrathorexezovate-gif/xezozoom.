@@ -22,7 +22,7 @@ const server_url = server;
 var connections = {};
 
 const peerConfigConnections = {
-    "iceServers":[{"urls" : "stun:stun.i.google.com:19302"}]}
+    "iceServers":[{"urls" : "stun:stun.l.google.com:19302"}]}
 
 export default function VideoMeetComponent() {
 
