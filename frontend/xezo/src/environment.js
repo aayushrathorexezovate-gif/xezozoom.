@@ -1,6 +1,6 @@
 let IS_PROD = true;
 const server = IS_PROD ? 
-    "https://xezovatelivebackend.onrender.com"
+    "https://xezozoom.onrender.com"
    : "http://localhost:8080" 
 
 
